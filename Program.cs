@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml;
 
@@ -8,17 +9,22 @@ namespace TileMap
 {
     public class Vertex
     {
-        public float x;
-        public float y;
-        public float z;
+        public double x;
+        public double y;
+        public double z;
+
+        public override string ToString()
+        {
+            return $"{x},{y},{z}";
+        }
     }
 
     class Program
     {
         static void Main(string[] args)
         {
-            string filename = @"C:\Users\nateh\OneDrive\Documents\kml\trim2_renumbered.kml";
-            string outfilename = @"C:\Users\nateh\OneDrive\Documents\kml\trim2_merge1.kml";
+            string filename = @"C:\Users\Nathan\Source\Repos\TileMap\kml\cleaned_renumbered.kml";
+            string outfilename = @"C:\Users\Nathan\Source\Repos\TileMap\kml\cleaned_merge1.kml";
             using StreamReader stream = File.OpenText(filename);
             XmlDocument doc = new XmlDocument();
             doc.Load(stream);
@@ -61,16 +67,16 @@ namespace TileMap
                 {
                     rect1_points.Add(new Vertex
                     {
-                        x = float.Parse(matches_rect1[i].Groups[2].Value),
-                        y = float.Parse(matches_rect1[i].Groups[3].Value),
-                        z = float.Parse(matches_rect1[i].Groups[4].Value)
+                        x = double.Parse(matches_rect1[i].Groups[2].Value),
+                        y = double.Parse(matches_rect1[i].Groups[3].Value),
+                        z = double.Parse(matches_rect1[i].Groups[4].Value)
                     });
 
                     rect2_points.Add(new Vertex
                     {
-                        x = float.Parse(matches_rect2[i].Groups[2].Value),
-                        y = float.Parse(matches_rect2[i].Groups[3].Value),
-                        z = float.Parse(matches_rect2[i].Groups[4].Value)
+                        x = double.Parse(matches_rect2[i].Groups[2].Value),
+                        y = double.Parse(matches_rect2[i].Groups[3].Value),
+                        z = double.Parse(matches_rect2[i].Groups[4].Value)
                     });
                 }
 
@@ -84,12 +90,17 @@ namespace TileMap
                     rect1.Attributes["id"].Value = $"poly{count}";
                     XmlNode rect = rect1.SelectSingleNode("kml:Polygon/kml:outerBoundaryIs/kml:LinearRing", nsmgr);
                     rect.Attributes["id"].Value = $"{count}";
+                    rect1_coords.InnerText = GetCoordString(MergeRectangles(rect1_points, rect2_points));
                     count++;
+                    rect1 = cachedNextNode;
+                    if (rect1 != null)
+                        rect2 = rect1.NextSibling;
                 }
-
-                rect1 = cachedNextNode;
-                if (rect1 != null)
+                else
+                {
+                    rect1 = rect2;
                     rect2 = rect1.NextSibling;
+                }              
             }            
 
             XmlTextWriter writer = new XmlTextWriter(outfilename, System.Text.Encoding.ASCII)
@@ -100,6 +111,27 @@ namespace TileMap
             writer.Flush();
 
             _ = Console.ReadKey();
+        }
+
+        private static List<Vertex> MergeRectangles(List<Vertex> rect1, List<Vertex> rect2)
+        {
+            List<Vertex> merged = new List<Vertex>(5);
+            merged.Add(rect1[0]);
+            merged.Add(rect2[1]);
+            merged.Add(rect2[2]);
+            merged.Add(rect1[3]);
+            return merged;
+        }
+
+        private static string GetCoordString(List<Vertex> coordList)
+        {
+            StringBuilder sb = new StringBuilder();
+            foreach (Vertex v in coordList)
+            {
+                sb.AppendLine(v.ToString());
+            }
+            sb.AppendLine(coordList[0].ToString());     // Last coordinate of LinearRing is repeat of first coordinate
+            return sb.ToString();
         }
     }
 }
