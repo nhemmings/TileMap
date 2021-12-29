@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<kml xmlns="http://www.opengis.net/kml/2.2" xmlns:gx="http://www.google.com/kml/ext/2.2">
+  <Document>
+    <Style id="transGreenPoly">
+      <LineStyle>
+        <color>8800ff00</color>
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>8800ff00</color>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="transYellowPoly">
+      <LineStyle>
+        <color>4400ffff</color>
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>4400ffff</color>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="transCyanPoly">
+      <LineStyle>
+        <color>44ffff55</color>
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>44ffff55</color>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="transPurplePoly">
+      <LineStyle>
+        <color>88FF00FF</color>
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>88FF00FF</color>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="transRateHiPoly">
+      <LineStyle>
+        <color>88CE30ff</color>
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>88CE30ff</color>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="transRateLoPoly">
+      <LineStyle>
+        <color>880000ff</color>
+        <width>2</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>880000ff</color>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="transYield1Poly">
+      <LineStyle>
+        <color>880000ff</color>
+        <width>1</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>880000ff</color>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="transYield2Poly">
+      <LineStyle>
+        <color>88000088</color>
+        <width>1</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>88000088</color>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="transYield3Poly">
+      <LineStyle>
+        <color>880088ff</color>
+        <width>1</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>880088ff</color>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="transYield4Poly">
+      <LineStyle>
+        <color>8800ffff</color>
+        <width>1</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>8800ffff</color>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="transYield5Poly">
+      <LineStyle>
+        <color>88008800</color>
+        <width>1</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>88008800</color>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="transYield6Poly">
+      <LineStyle>
+        <color>88ff4400</color>
+        <width>1</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>88ff4400</color>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="transYieldNoPoly">
+      <LineStyle>
+        <color>88777777</color>
+        <width>1</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>88777777</color>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="transRate1">
+      <LineStyle>
+        <color>8833ffff</color>
+        <width>1</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>8833ffff</color>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="transRate2">
+      <LineStyle>
+        <color>880099ff</color>
+        <width>1</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>880099ff</color>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="transRate3">
+      <LineStyle>
+        <color>880066ff</color>
+        <width>1</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>880066ff</color>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="transRate4">
+      <LineStyle>
+        <color>889d4188</color>
+        <width>1</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>889d4188</color>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="transRate5">
+      <LineStyle>
+        <color>887c0f81</color>
+        <width>1</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>887c0f81</color>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="transRate6">
+      <LineStyle>
+        <color>88d6ae6b</color>
+        <width>1</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>88d6ae6b</color>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="transRate7">
+      <LineStyle>
+        <color>88c69242</color>
+        <width>1</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>88c69242</color>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="transRate8">
+      <LineStyle>
+        <color>889c7121</color>
+        <width>1</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>889c7121</color>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="transRate9">
+      <LineStyle>
+        <color>88ff291e</color>
+        <width>1</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>88ff291e</color>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Style id="transRate10">
+      <LineStyle>
+        <color>88339900</color>
+        <width>1</width>
+      </LineStyle>
+      <PolyStyle>
+        <color>88339900</color>
+        <outline>1</outline>
+      </PolyStyle>
+    </Style>
+    <Folder>
+      <name>Coverage</name>
+      <Style>
+        <ListStyle>
+          <listItemType>checkHideChildren</listItemType>
+          <bgColor>00ffffff</bgColor>
+          <maxSnippetLines>1</maxSnippetLines>
+        </ListStyle>
+      </Style>
+      <Placemark>
+        <name>Coverage</name>
+        <description><![CDATA[ <style type="text/css"> td{ text-align: center; width:100px;} </style> 
+<b><u>Spring 2014 tile lines</u></b>
+<p><b>Applied Coverage</b>: 1.16528 Acres</p><p><b>Boom Information</b> 
+<table><tr><td>Swath Width</td><td>3 ft</td></tr></table></p>
+]]></description>
+        <styleUrl>#msn_info-i</styleUrl>
+        <Point>
+          <coordinates>-91.6609,40.6985,0</coordinates>
+        </Point>
+      </Placemark>
+      <Placemark id="poly0">
+        <styleUrl>#transGreenPoly</styleUrl>
+        <description><![CDATA[<table><tr><td><b>SOG :</b></td><td>3.70 mph											</td></tr><tr><td><b>COG :</b></td><td>86.2											</td></tr></table> ]]></description>
+        <TimeStamp>
+          <when>2014-04-12T18:48:47Z</when>
+        </TimeStamp>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing id="0">
+              <coordinates> -91.66623036,40.69733314,219.90200000
+ -91.66620961,40.69733454,219.90200000
+ -91.66620876,40.69732633,219.90200000
+ -91.66622998,40.69732491,219.90200000
+ -91.66623036,40.69733314,219.90200000
+
+							</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+      <Placemark id="poly1">
+        <styleUrl>#transGreenPoly</styleUrl>
+        <description><![CDATA[<table><tr><td><b>SOG :</b></td><td>4.13 mph											</td></tr><tr><td><b>COG :</b></td><td>88.8											</td></tr></table> ]]></description>
+        <TimeStamp>
+          <when>2014-04-12T18:48:49Z</when>
+        </TimeStamp>
+        <Polygon>
+          <outerBoundaryIs>
+            <LinearRing id="1">
+              <coordinates> -91.66618749,40.69733525,219.72200000
+ -91.66616599,40.69733531,219.72200000
+ -91.66616582,40.69732708,219.72200000
+ -91.66618690,40.69732703,219.72200000
+ -91.66618749,40.69733525,219.72200000
+
+							</coordinates>
+            </LinearRing>
+          </outerBoundaryIs>
+        </Polygon>
+      </Placemark>
+    </Folder>
+  </Document>
+</kml>
